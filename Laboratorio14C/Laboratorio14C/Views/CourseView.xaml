@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Laboratorio14C.Views.CourseView">
+    <StackLayout>
+        <Entry Placeholder="Buscar por nombre" x:Name="SearchEntry" />
+        <Button Text="Buscar" Clicked="SearchButton_Clicked" />
+
+        <ListView ItemsSource="{Binding Courses}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Description}" />
+                            <Label Text="{Binding Credit, StringFormat='Credit: {0}'}" />
+                            <Label Text="{Binding CreditStartDate, StringFormat='Start Date: {0:MM/dd/yyyy}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

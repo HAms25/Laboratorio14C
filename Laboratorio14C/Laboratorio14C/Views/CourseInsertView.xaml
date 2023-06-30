@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Laboratorio14C.Views.CourseInsertView">
+    <StackLayout>
+        <Label Text="Nombre" />
+        <Entry Text="{Binding Name}" />
+
+        <Label Text="Descripción" />
+        <Entry Text="{Binding Description}" />
+
+        <Label Text="Crédito" />
+        <Entry Text="{Binding Credit}" />
+
+        <Label Text="Fecha de inicio del crédito" />
+        <DatePicker Date="{Binding CreditStartDate}" />
+
+        <Button Text="Guardar" Command="{Binding SaveCommand}" />
+    </StackLayout>
+</ContentPage>
